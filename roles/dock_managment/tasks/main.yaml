@@ -1,0 +1,20 @@
+---
+- name: List all dock apps
+  shell: "dockutil --list | awk -F 'file://' '{print $1}'"
+  changed_when: false
+  register: dock_apps
+
+- name: Remove selected from Dock
+  when: "'{{ item }}' in dock_apps.stdout"
+  command: dockutil --remove '{{ item }}'
+  with_items: "{{ dockitems_to_remove }}"
+
+- name: Check if items in dock exist
+  shell: dockutil --find '{{ item.name }}' || dockutil -v --add '{{ item.path }}' --label '{{ item.name }}'
+  with_items: "{{ dockitems_to_persist }}"
+  register: dock_app_added
+  changed_when: '"item added at end" in dock_app_added.stdout'
+
+- name: Fix order
+  shell: dockutil --move '{{ item.name }}' --position {{ item.pos }}
+  with_items: "{{ dockitems_to_persist }}"

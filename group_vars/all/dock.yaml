@@ -1,0 +1,34 @@
+---
+dockitems_to_remove:
+  - Safari
+  - Maps
+  - Siri
+  - Contacts
+  - Downloads
+  - Reminders
+  - Messages
+  - Photos
+  - App Store
+  - FaceTime
+  - iBooks
+  - iTunes
+
+dockitems_to_persist:
+  - name: Launchpad
+    path: /Applications/Launchpad.app
+    pos: 1
+  - name: Google Chrome
+    path: /Applications/Google Chrome.app
+    pos: 2
+  - name: iTerm2
+    path: /Applications/iTerm.app
+    pos: 3
+  - name: Telegram
+    path: /Applications/Telegram.app
+    pos: 4
+  - name: Slack
+    path: /Applications/Slack.app
+    pos: 5
+  - name: System Preferences
+    path: /Applications/System Preferences.app
+    pos: 6

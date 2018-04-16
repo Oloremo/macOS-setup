@@ -1,0 +1,11 @@
+---
+- name: List installed MAS apps
+  command: mas list
+  register: mas_list
+  check_mode: no
+  changed_when: false
+
+- name: Ensure configured MAS apps are installed
+  when: "'{{ item.id }}' not in mas_list.stdout"
+  command: mas install "{{ item.id }}"
+  with_items: "{{ mas_apps }}"

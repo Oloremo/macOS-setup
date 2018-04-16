@@ -1,0 +1,6 @@
+---
+- name: Install homebrew apps
+  hosts: localhost
+  connection: local
+  roles:
+    - homebrew

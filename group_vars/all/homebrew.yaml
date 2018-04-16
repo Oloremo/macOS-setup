@@ -1,0 +1,41 @@
+---
+homebrew_taps:
+  - caskroom/cask
+
+homebrew_cask_apps:
+  - docker
+  - google-chrome
+  - iterm2
+  - vlc
+  - sublime-text
+  - slack
+  - telegram
+  - dropbox
+  - tunnelblick
+  - karabiner-elements
+
+homebrew_packages:
+  - dockutil
+  - mas
+  - awscli
+  - bash
+  - dnsmasq
+  - gawk
+  - git
+  - gnu-sed
+  - gnupg
+  - ipcalc
+  - iproute2mac
+  - jq
+  - openssl
+  - pwgen
+  - python
+  - python3
+  - readline
+  - rpm2cpio
+  - ssh-copy-id
+  - telnet
+  - unrar
+  - wget
+  - xz
+

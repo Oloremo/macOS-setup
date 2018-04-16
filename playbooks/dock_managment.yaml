@@ -1,0 +1,6 @@
+---
+- name: Manage Dock Apps
+  hosts: localhost
+  connection: local
+  roles:
+    - dock_managment

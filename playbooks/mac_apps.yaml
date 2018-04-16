@@ -1,0 +1,6 @@
+---
+- name: Install mac apps
+  hosts: localhost
+  connection: local
+  roles:
+    - mac_apps
