@@ -1,3 +1,4 @@
 - import_playbook: homebrew.yaml
 - import_playbook: mac_apps.yaml
 - import_playbook: dock_managment.yaml
+- import_playbook: bash.yaml

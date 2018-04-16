@@ -1,0 +1,10 @@
+---
+- name: Create bash and vimrc files
+  template:
+    src: "{{ item }}"
+    dest: "{{ local_user_home }}/.{{ item }}"
+    owner: "{{ local_user }}"
+    mode: 0644
+  with_items:
+    - bashrc
+    - vimrc

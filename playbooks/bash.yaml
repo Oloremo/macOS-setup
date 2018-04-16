@@ -1,0 +1,6 @@
+---
+- name: bash and cmd utils configuration
+  hosts: localhost
+  connection: local
+  roles:
+    - bash

@@ -1,0 +1,4 @@
+---
+local_user: oloremo
+local_user_home: "{{ ansible_env.HOME }}"
+powerline_enabled: false

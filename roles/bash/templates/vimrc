@@ -1,0 +1,25 @@
+syntax on
+set enc=utf-8      " Utf8 by default
+set ls=2           " enable statusbar
+set incsearch      " incremeneted search
+set hlsearch       " search highlight
+set scrolloff=5    " sroll 5 lines at once
+set nobackup       " no backupfiles
+set nowritebackup  " only in case you don't want a backup file while editing
+set noswapfile     " no swap files
+set expandtab      " tabs to spaces
+set tabstop=2      " number of spaces per tab
+set shiftwidth=2   " Number of spaces to use for each step of (auto)indent. Used for |'cindent'|, |>>|, |<<|, etc.
+set paste          " Use paste mode
+set list           " Show special symbols
+set nu             " show line numbers
+"set autoindent     " Use autoident(indentation will match previous string)
+
+set ruler
+" Open file at the same position
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+" Highlight lines longer than 80 characters
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%120v.\+/
